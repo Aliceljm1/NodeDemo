@@ -17,7 +17,7 @@ app.get('/login', function (req, res) {
         resjson = '{"code":1,"uid":"4na7ah2jq75kwp5yyd9izg","username":"刘泾铭","account":"ljm","status":true,"errorNum":1,"siteurl":"http://www.yixuexiao.cn:85","schoolid":"y5hjacyjoilgmnbjfwaffa","userType":0,"stype":"1,3","categoryId":"2345","categoryName":"高中数学文科库","ledgeId":"2346","ledgeName":"必修1","bankid":"11","bankname":"高中数学"}';
     }
     else {
-        resjson = '{code:-1,msg="用户名密码错误"}';
+        resjson = '{"code":-1,"msg":"用户名密码错误"}';
     }
 	res.header("Content-Type", "application/json; charset=utf-8");
     res.end(resjson);
