@@ -11,10 +11,10 @@ app.get('/', function (req, res) {
 });
 
 
-//自动登陆，是以哦那个301重定向，
+//自动登陆，301重定向，
 app.get("/autologin", function (req, res)  {
 
-    res.writeHead(301, { 'Location': 'http://localhost:8081/login?username=ljm&pwd=111111' });
+    res.writeHead(301, { 'Location': 'http://localhost:8081/login?username=' + req.query.username + '&pwd=' + req.query.pwd });
     console.log(res._header);
     res.end();
 
